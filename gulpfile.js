@@ -8,7 +8,7 @@ gulp.task('default', function() {
   gulp.src('app.js')
     .pipe(rsync({
       root: '',
-      hostname: 'pi@192.168.0.122',
+      hostname: config.username + '@' + config.host,
       destination: ''
     }))
 });
