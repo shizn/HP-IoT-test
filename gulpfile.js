@@ -1,7 +1,8 @@
-var fs = require('fs');
-var gulp = require('gulp');
-var rsync = require('gulp-rsync');
+var fs = require('fs')
+var gulp = require('gulp')
+var rsync = require('gulp-rsync')
 var GulpSSH = require('gulp-ssh')
+var config = require('./config.json')
 
 gulp.task('default', function() {
   gulp.src('app.js')
@@ -11,13 +12,6 @@ gulp.task('default', function() {
       destination: ''
     }))
 });
-
-var config = {
-  host: '192.168.0.122',
-  port: 22,
-  username: 'pi',
-  password: 'raspberry'
-}
 
 var gulpSSH = new GulpSSH({
   ignoreErrors: false,
