@@ -2,7 +2,7 @@ var fs = require('fs')
 var gulp = require('gulp')
 var rsync = require('gulp-rsync')
 var GulpSSH = require('gulp-ssh')
-var config = require('./config.json')
+var config = require('./iot_config.json')
 
 gulp.task('default', function() {
   gulp.src('app.js')
