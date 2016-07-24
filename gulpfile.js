@@ -19,5 +19,5 @@ var gulpSSH = new GulpSSH({
 })
 
 gulp.task('run', ['default'], function() {
-    gulpSSH.shell("nohup node app.js &")
+    gulpSSH.shell("node app.js")
 })
